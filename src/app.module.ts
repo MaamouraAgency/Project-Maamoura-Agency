@@ -6,6 +6,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PlacesModule } from './places/places.module';
 import { Place } from './places/places.entity'; 
+import { Reservation } from './reservation/reservation.entity';
+import { ReservationModule } from './reservation/reservation.module';
 
 @Module({
   imports: [
@@ -16,11 +18,12 @@ import { Place } from './places/places.entity';
       username: 'dhia',
       password: '@Dhia12345@*',
       database: 'immo',
-      entities: [Place], 
-      migrations:[Place],
+      entities: [Place,Reservation], 
+      migrations:[Place,Reservation],
       synchronize: true,
     }),
     PlacesModule,
+    ReservationModule,
   ],
   controllers: [AppController],
   providers: [AppService],

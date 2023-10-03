@@ -30,9 +30,9 @@ findOne(@Param('id',ParseIntPipe)id){
     return `Place with ID ${(await newPlace).id} has been added.`;
 }
 @Put(':id')
-update(@Param('id') id: string, @Body() updateCatDto: any) {
-  const newPlace:any = this.PlacesServices.update(id,updateCatDto)
-  return `This action updates `;
+update(@Param('id') id: string, @Body() updateDto: any) {
+  const newPlace:any = this.PlacesServices.update(id,updateDto)
+  return `This place is updated `;
 }
 @Delete(':id')
 async remove(@Param('id') id: string) {

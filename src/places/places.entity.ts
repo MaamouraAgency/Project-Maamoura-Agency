@@ -20,4 +20,5 @@ export class Place {
 
   @Column({ type: 'varchar', length: 255 })
   Image: string;
+    reservations: any;
 }
