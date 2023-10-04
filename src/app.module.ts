@@ -8,6 +8,7 @@ import { PlacesModule } from './places/places.module';
 import { Place } from './places/places.entity'; 
 import { Reservation } from './reservation/reservation.entity';
 import { ReservationModule } from './reservation/reservation.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ReservationModule } from './reservation/reservation.module';
     }),
     PlacesModule,
     ReservationModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

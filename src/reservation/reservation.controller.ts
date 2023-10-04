@@ -15,11 +15,11 @@ export class ReservationController {
     findAll(){
         return this.ReservationService.getReservation();
     }
-    @Get('id')
+    @Get(':id')
     findOne(@Param('id',ParseIntPipe)id){
     return this.ReservationService.findOne(id)
     }
-    
+
     @Post()
     async create(@Body()reservationToDo:ReservationToDo){
         const newReservation=  this.ReservationService.create(reservationToDo);
